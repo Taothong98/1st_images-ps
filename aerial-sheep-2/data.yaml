@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['sheep']
+
+roboflow:
+  workspace: test-8gntr
+  project: aerial-sheep-926fa
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/test-8gntr/aerial-sheep-926fa/dataset/2

@@ -1,0 +1,44 @@
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="QwmftxjJQUGBcvg4mACZ")
+project = rf.workspace("test-8gntr").project("aerial-sheep-926fa")
+version = project.version(2)
+dataset = version.download("yolov8")
+
+!pip install ultralytics
+
+
+----- API -----
+pip install fastapi uvicorn python-multipart pyngrok nest-asyncio
+
+ps aux | grep python3
+
+--- เช็คการทำงานของ GPU ---
+nvidia-smi
+
+
+---- ngrok Terminal ----
+
+
+import getpass
+from pyngrok import ngrok
+
+# จะมีช่องให้พิมพ์ Token ขึ้นมา (เหมือนตอนพิมพ์รหัสผ่าน จะไม่โชว์ตัวอักษร)
+token = getpass.getpass("Enter your Ngrok Token: ")
+ngrok.set_auth_token(token)
+
+----- colab to google drive ----
+from google.colab import drive
+drive.mount('/content/drive')
+
+
+---- test API ----
+curl -X POST "https://mistakably-transmental-vilma.ngrok-free.dev/predict" \
+     -H "Content-Type: multipart/form-data" \
+     -F "file=@/path/to/your/image.jpg"
+
+https://xxxx-url-ngrok/docs
+
+---- for web ----
+pip install jinja2 python-multipart
